@@ -2,17 +2,8 @@
   <div>
     <TheNavigation />
 
-    <div class="container">
+    <div class="mt-16 max-w-[1200px] mx-auto p-[1rem]">
       <slot />
     </div>
   </div>
 </template>
-
-
-<style scoped>
-.container {
-  margin: 60px auto 0;
-  padding: 1rem;
-  max-width: 960px;
-}
-</style>

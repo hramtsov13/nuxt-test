@@ -3,15 +3,15 @@
     <Head>
       <Title> About </Title>
     </Head>
-    <h1>About page</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam ut
-      libero nulla omnis rem itaque similique qui, iure id adipisci nisi
-      inventore corporis voluptas velit consequatur quia architecto ducimus
-      unde, pariatur voluptatibus perspiciatis exercitationem natus enim!
-      Veritatis quos ad sit voluptas aliquam ab animi, dignissimos fuga nostrum
-      itaque recusandae quidem!
-    </p>
+    <div class="mb-14 border-b border-b-gray-300 pb-6">
+      <h1 class="font-bold text-[2.5rem]">About page</h1>
+      <p class="text-gray-500 text-[1rem]">
+        Here we have redefined the <code>layout</code>
+      </p>
+    </div>
+    <NuxtLink class="py-2 px-6 bg-gray-300 rounded-md" to="/">
+      Go Back Button
+    </NuxtLink>
   </div>
 </template>
 

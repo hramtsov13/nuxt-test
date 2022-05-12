@@ -3,17 +3,24 @@
     <Head>
       <Title> HomePage </Title>
     </Head>
-    <h1 class="text-red font-bold">Index Page</h1>
+    <div class="mb-14 border-b border-b-gray-300 pb-6">
+      <h1 class="font-bold text-[2.5rem]">Index page</h1>
+      <p class="text-gray-500 text-[1rem]">
+        Here we use <code>/plugins/test</code> and <code>/server/api/user</code>
+      </p>
+    </div>
 
-    <div class="card">
-      <h2>{{ user.name }}</h2>
+    <h2 class="font-bold text-[1.6rem] mb-5">Server/api</h2>
+    <div class="py-5 px-10 border border-gray-300 rounded-xl mb-10 bg-gray-100">
+      <h2><strong> Name: </strong>{{ user.name }}</h2>
       <p><strong> Age: </strong>{{ user.age }}</p>
       <p><strong>Job: </strong>{{ user.job }}</p>
     </div>
 
-    <h2>
+    <h2 class="font-bold text-[1.6rem] mb-5">Plugins/test</h2>
+    <div class="py-5 px-10 border border-gray-300 rounded-xl mb-10 bg-gray-100">
       {{ $test() }}
-    </h2>
+    </div>
   </div>
 </template>
 
@@ -21,12 +28,3 @@
 import "../assets/css/tailwind.css";
 const { data: user } = await useAsyncData("user", () => $fetch("/api/user"));
 </script>
-
-<style lang="scss" scoped>
-.card {
-  padding: 20px 40px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  background: #fef;
-}
-</style>

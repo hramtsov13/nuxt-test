@@ -12,7 +12,7 @@
     >
       Vue&SSR project setup
     </h1>
-    <ul class="flex justify-between items-center mb-40">
+    <ul class="flex justify-between items-center mb-40 pl-[4rem]">
       <li
         class="
           hover:text-green
@@ -95,6 +95,28 @@
             class="w-10 h-10 absolute -left-16"
           />
           <p>i18n</p>
+        </NuxtLink>
+      </li>
+      <li
+        class="
+          hover:text-green
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+        "
+      >
+        <NuxtLink
+          class="flex items-center relative"
+          to="https://vueuse.org/"
+          target="_blank"
+        >
+          <img
+            src="../assets/img/vueuse.svg"
+            alt="i18n logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>Vue use</p>
         </NuxtLink>
       </li>
     </ul>

@@ -20,7 +20,7 @@
 
     <ul class="nav-list list-none m-0 p-0 flex">
       <li class="mr-3">
-        <NuxtLink class="hover:underline" to="/">Home</NuxtLink>
+        <NuxtLink class="hover:underline" to="/home">Home</NuxtLink>
       </li>
       <li class="mr-3">
         <NuxtLink class="hover:underline" to="/fetch">Fetch</NuxtLink>

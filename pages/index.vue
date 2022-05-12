@@ -1,30 +1,126 @@
 <template>
-  <div>
-    <Head>
-      <Title> HomePage </Title>
-    </Head>
-    <div class="mb-14 border-b border-b-gray-300 pb-6">
-      <h1 class="font-bold text-[2.5rem]">Index page</h1>
-      <p class="text-gray-500 text-[1rem]">
-        Here we use <code>/plugins/test</code> and <code>/server/api/user</code>
-      </p>
-    </div>
-
-    <h2 class="font-bold text-[1.6rem] mb-5">Server/api</h2>
-    <div class="py-5 px-10 border border-gray-300 rounded-xl mb-10 bg-gray-100">
-      <h2><strong> Name: </strong>{{ user.name }}</h2>
-      <p><strong> Age: </strong>{{ user.age }}</p>
-      <p><strong>Job: </strong>{{ user.job }}</p>
-    </div>
-
-    <h2 class="font-bold text-[1.6rem] mb-5">Plugins/test</h2>
-    <div class="py-5 px-10 border border-gray-300 rounded-xl mb-10 bg-gray-100">
-      {{ $test() }}
+  <div class="text-white select-none">
+    <h1
+      class="
+        text-[6rem]
+        leading-[1.1]
+        text-center
+        font-bold
+        mb-10
+        text-gradient
+      "
+    >
+      Vue&SSR project setup
+    </h1>
+    <ul class="flex justify-between items-center mb-40">
+      <li
+        class="
+          hover:text-green
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+        "
+      >
+        <NuxtLink
+          class="flex items-center relative"
+          to="https://vuejs.org/"
+          target="_blank"
+        >
+          <img
+            src="../assets/img/vue.svg"
+            alt="Nuxt 3 logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>Vue 3</p>
+        </NuxtLink>
+      </li>
+      <li
+        class="
+          hover:text-green
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+        "
+      >
+        <NuxtLink
+          class="flex items-center relative"
+          to="https://v3.nuxtjs.org/"
+          target="_blank"
+        >
+          <img
+            src="../assets/img/nuxt.svg"
+            alt="Nuxt 3 logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>Nuxt 3</p>
+        </NuxtLink>
+      </li>
+      <li
+        class="
+          hover:text-sky-400
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+          relative
+        "
+      >
+        <NuxtLink
+          to="https://tailwindcss.com/docs/installation"
+          target="_blank"
+        >
+          <img
+            src="../assets/img/tailwind.svg"
+            alt="Tailwind logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>Tailwind</p>
+        </NuxtLink>
+      </li>
+      <li
+        class="
+          hover:text-green
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+        "
+      >
+        <NuxtLink class="flex items-center relative" to="/" target="_blank">
+          <img
+            src="../assets/img/i18n.svg"
+            alt="i18n logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>i18n</p>
+        </NuxtLink>
+      </li>
+    </ul>
+    <div class="flex justify-center items-center">
+      <NuxtLink
+        to="/home"
+        class="
+          py-4
+          px-12
+          bg-sky-800
+          rounded-lg
+          text-[1.5rem]
+          font-medium
+          hover:text-gradient hover:bg-green
+          transition
+          duration-300
+        "
+      >
+        Start
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup>
-import "../assets/css/tailwind.css";
-const { data: user } = await useAsyncData("user", () => $fetch("/api/user"));
+definePageMeta({
+  layout: "dashboard",
+});
 </script>

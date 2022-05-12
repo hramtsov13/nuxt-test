@@ -9,7 +9,7 @@
         Here we have redefined the <code>layout</code>
       </p>
     </div>
-    <NuxtLink class="py-2 px-6 bg-gray-300 rounded-md" to="/">
+    <NuxtLink class="py-2 px-6 bg-gray-300 rounded-md" to="/home">
       Go Back Button
     </NuxtLink>
   </div>

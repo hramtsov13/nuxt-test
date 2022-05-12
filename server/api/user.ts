@@ -1,6 +1,6 @@
 export default defineEventHandler(() => {
   return {
-    name: 'Misha',
+    nickname: 'hramtsov13',
     age: 24,
     job: 'Frontend dev.',
   };

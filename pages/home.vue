@@ -25,6 +25,5 @@
 </template>
 
 <script setup>
-import "../assets/css/tailwind.css";
 const { data: user } = await useAsyncData("user", () => $fetch("/api/user"));
 </script>

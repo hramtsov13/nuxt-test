@@ -1,24 +1,17 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from 'windicss/plugin';
+import { defineConfig } from 'windicss/helpers';
+import colors from 'windicss/colors';
 
-module.exports = {
-  mode: 'jit',
-  purge: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
-  darkMode: false, // or 'media' or 'class'
+export default defineConfig({
+  darkMode: 'class',
+  attributify: true,
   theme: {
-    extend: {
-      colors: {
-        green: '#42d392',
-      },
+    colors: {
+      ...colors,
+      green: '#42d392',
+      white: '#ffffff',
+      blue: '#075985',
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     plugin(function ({ addComponents }) {
@@ -34,4 +27,4 @@ module.exports = {
       });
     }),
   ],
-};
+});

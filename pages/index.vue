@@ -10,7 +10,7 @@
         text-gradient
       "
     >
-      Vue&SSR project setup
+      {{ $t("INDEX_PAGE_TITLE") }}
     </h1>
     <ul class="flex justify-between items-center mb-40 pl-[4rem]">
       <li
@@ -29,7 +29,7 @@
         >
           <img
             src="../assets/img/vue.svg"
-            alt="Nuxt 3 logo"
+            alt="Vue 3 logo"
             class="w-10 h-10 absolute -left-16"
           />
           <p>Vue 3</p>
@@ -72,11 +72,11 @@
           target="_blank"
         >
           <img
-            src="../assets/img/tailwind.svg"
-            alt="Tailwind logo"
+            src="../assets/img/windi.svg"
+            alt="Windicss logo"
             class="w-10 h-10 absolute -left-16"
           />
-          <p>Tailwind</p>
+          <p>Windicss</p>
         </NuxtLink>
       </li>
       <li
@@ -126,7 +126,7 @@
         class="
           py-4
           px-12
-          bg-sky-800
+          bg-blue
           rounded-lg
           text-[1.5rem]
           font-medium
@@ -135,7 +135,7 @@
           duration-300
         "
       >
-        Start
+        {{ $t("INDEX_PAGE_START_BUTTON") }}
       </NuxtLink>
     </div>
   </div>

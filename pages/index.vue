@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title> Vue&SSR Setup </Title>
+  </Head>
   <div class="text-white select-none">
     <h1
       class="
@@ -12,7 +15,7 @@
     >
       {{ $t("INDEX_PAGE_TITLE") }}
     </h1>
-    <ul class="flex justify-between items-center mb-40 pl-[4rem]">
+    <ul class="mb-40 pl-[4rem] grid grid-cols-3 grid-rows-2 gap-[20px]">
       <li
         class="
           hover:text-green
@@ -20,6 +23,7 @@
           duration-300
           text-[2rem]
           leading-none
+          justify-self-center
         "
       >
         <NuxtLink
@@ -42,6 +46,7 @@
           duration-300
           text-[2rem]
           leading-none
+          justify-self-center
         "
       >
         <NuxtLink
@@ -65,6 +70,7 @@
           text-[2rem]
           leading-none
           relative
+          justify-self-center
         "
       >
         <NuxtLink
@@ -86,9 +92,14 @@
           duration-300
           text-[2rem]
           leading-none
+          justify-self-center
         "
       >
-        <NuxtLink class="flex items-center relative" to="/" target="_blank">
+        <NuxtLink
+          class="flex items-center relative"
+          to="https://i18n.nuxtjs.org/"
+          target="_blank"
+        >
           <img
             src="../assets/img/i18n.svg"
             alt="i18n logo"
@@ -104,6 +115,7 @@
           duration-300
           text-[2rem]
           leading-none
+          justify-self-center
         "
       >
         <NuxtLink
@@ -113,10 +125,33 @@
         >
           <img
             src="../assets/img/vueuse.svg"
-            alt="i18n logo"
+            alt="Vue use logo"
             class="w-10 h-10 absolute -left-16"
           />
           <p>Vue use</p>
+        </NuxtLink>
+      </li>
+      <li
+        class="
+          hover:text-yellow
+          transition
+          duration-300
+          text-[2rem]
+          leading-none
+          justify-self-center
+        "
+      >
+        <NuxtLink
+          class="flex items-center relative"
+          to="https://pinia.vuejs.org/"
+          target="_blank"
+        >
+          <img
+            src="../assets/img/pinia.svg"
+            alt="Pinia logo"
+            class="w-10 h-10 absolute -left-16"
+          />
+          <p>Pinia</p>
         </NuxtLink>
       </li>
     </ul>

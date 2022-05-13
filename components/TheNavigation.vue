@@ -23,16 +23,10 @@
         <NuxtLink class="hover:underline" to="/home">Home</NuxtLink>
       </li>
       <li class="mr-3">
-        <NuxtLink class="hover:underline" to="/fetch">Fetch</NuxtLink>
-      </li>
-      <li class="mr-3">
-        <NuxtLink class="hover:underline" to="/about">About</NuxtLink>
-      </li>
-      <li class="mr-3">
-        <NuxtLink class="hover:underline" to="/404">404</NuxtLink>
+        <NuxtLink class="hover:underline" to="/store">Store</NuxtLink>
       </li>
       <li>
-        <NuxtLink class="hover:underline" to="/auth">Auth</NuxtLink>
+        <NuxtLink class="hover:underline" to="/404">404</NuxtLink>
       </li>
     </ul>
   </nav>

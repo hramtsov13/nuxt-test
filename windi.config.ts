@@ -6,11 +6,20 @@ export default defineConfig({
   darkMode: 'class',
   attributify: true,
   theme: {
+    screens: {
+      xs: '440px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     colors: {
       ...colors,
       green: '#42d392',
       white: '#ffffff',
       blue: '#075985',
+      yellow: '#ffd859',
     },
   },
   plugins: [

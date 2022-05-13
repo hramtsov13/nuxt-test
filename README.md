@@ -1,5 +1,7 @@
 # Nuxt 3, Vite, Vue 3, i18n, Tailwind starter pack
 
+![Nuxt-starter-pack](https://user-images.githubusercontent.com/57592116/168314160-83148eee-819e-48f9-9d93-a200cf7311f3.png)
+
 ## Setup
 
 Make sure to install the dependencies:

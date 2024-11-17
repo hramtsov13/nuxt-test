@@ -1,6 +1,5 @@
 <template>
-  <div class="h-[800px]">
-    <span class="text-red-200">OLEG</span>
+  <div class="container py-10">
     <slot />
   </div>
 </template>

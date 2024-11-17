@@ -11,8 +11,10 @@ const usePostsStore = defineStore({
   },
 
   actions: {
-    getAllPosts: async function() {
-      const { data } = await useFetch<Array<Post>>(`${process.env.NUXT_PUBLIC_API_ENDPOINT}/posts`); 
+    fetchAllPosts: async function() {
+      const { apiEndpoint } = useRuntimeConfig().public;
+
+      const { data } = await useFetch<Array<Post>>(`${apiEndpoint}/posts`); 
   
       if (data.value) {
         this.posts = data.value;

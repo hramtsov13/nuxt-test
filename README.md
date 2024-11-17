@@ -1,22 +1,41 @@
-# Nuxt 3, Vite, Vue 3, i18n, Tailwind starter pack
+# Nuxt Minimal Starter
 
-![Nuxt-starter-pack](https://user-images.githubusercontent.com/57592116/168314160-83148eee-819e-48f9-9d93-a200cf7311f3.png)
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install dependencies:
 
 ```bash
-# yarn / # npm
-yarn install / npm install
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
 ## Production
@@ -24,11 +43,33 @@ npm run dev
 Build the application for production:
 
 ```bash
+# npm
 npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
 Locally preview production build:
 
 ```bash
+# npm
 npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

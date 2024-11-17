@@ -1,0 +1,5 @@
+echo '----------LINTING STARTED----------'
+npm run lint:fix
+echo '----------LINTING IS DONE----------'
+git add .
+echo '----------ALL CHANGED FILES HAVE BEEN ADDED TO YOUR COMMIT----------'

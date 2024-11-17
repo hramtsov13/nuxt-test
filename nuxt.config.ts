@@ -1,5 +1,5 @@
-import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -18,16 +18,8 @@ export default defineNuxtConfig({
         {
           hid: 'description',
           name: 'description',
-          content:
-            'Nuxt 3 Template',
+          content: 'Nuxt 3 Template',
         },
-      ],
-      link: [
-        // {
-        //   rel: 'preload',
-        //   as: 'style',
-        //   href: '',
-        // },
       ],
     },
   },
@@ -36,11 +28,12 @@ export default defineNuxtConfig({
     // See https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
     join(currentDir, './assets/css/global.css'),
   ],
-  
-  modules: [
-    '@nuxtjs/tailwindcss', 
-    'shadcn-nuxt'
-  ],
+
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'shadcn-nuxt'],
+
+  eslint: {
+    // Additional configs
+  },
 
   shadcn: {
     /**
@@ -51,7 +44,7 @@ export default defineNuxtConfig({
      * Directory that the component lives in.
      * @default "./components/ui"
      */
-    componentDir: './components/ui'
+    componentDir: './components/ui',
   },
 
   nitro: {
@@ -61,4 +54,4 @@ export default defineNuxtConfig({
     },
     minify: true,
   },
-})
+});

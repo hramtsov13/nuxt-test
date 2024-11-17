@@ -1,11 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'default'
-})
+  layout: 'default',
+});
 </script>
 
 <template>
-  <div>
-    OLEG
-  </div>
+  <div>OLEG</div>
 </template>

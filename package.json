@@ -1,22 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "start:build": "nuxt build",
+    "start:dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "",
+    "lint:fix": "",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@vueuse/nuxt": "^8.4.2",
-    "autoprefixer": "^10.4.7",
-    "nuxt": "3.0.0-27480376.fdd38f9",
-    "nuxt-windicss": "^2.3.1",
-    "postcss": "^8.4.13"
-  },
-  "dependencies": {
-    "@intlify/nuxt3": "^0.2.1",
-    "@pinia/nuxt": "^0.1.9",
-    "@vueuse/core": "^8.4.2",
-    "pinia": "^2.0.14"
+    "husky": "^9.1.6",
+    "nuxt": "^3.14.159"
   }
 }

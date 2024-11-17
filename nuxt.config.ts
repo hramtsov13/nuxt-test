@@ -1,3 +1,7 @@
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const currentDir = dirname(fileURLToPath(import.meta.url));
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -27,6 +31,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  css: [
+    // See https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
+    join(currentDir, './assets/css/global.css'),
+  ],
   
   modules: [
     '@nuxtjs/tailwindcss', 

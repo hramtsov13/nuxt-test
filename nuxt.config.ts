@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     join(currentDir, './assets/css/global.css'),
   ],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'shadcn-nuxt'],
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/eslint'],
 
   eslint: {
     // Additional configs

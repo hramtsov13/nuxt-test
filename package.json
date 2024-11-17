@@ -1,16 +1,27 @@
 {
+  "name": "nuxt-3-starter-pack",
+  "author": {
+    "name": "Mikhail Khramtsov",
+    "url": "https://github.com/hramtsov13"
+  },
   "private": true,
+  "type": "module",
   "scripts": {
     "start:build": "nuxt build",
     "start:dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
     "lint": "",
     "lint:fix": "",
     "prepare": "husky"
   },
+  "dependencies": {
+    "nuxt": "^3.14.159",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
   "devDependencies": {
-    "husky": "^9.1.6",
-    "nuxt": "^3.14.159"
+    "husky": "^9.1.6"
   }
 }

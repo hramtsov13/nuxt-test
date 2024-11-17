@@ -9,23 +9,15 @@
   "endOfLine": "lf",
   "importOrder": [
     "<BUILTIN_MODULES>",
-    "^(react/(.*)$)|^(react$)",
-    "^(next/(.*)$)|^(next$)",
+    "^(vue/(.*)$)|^(vue$)",
+    "^(nuxt/(.*)$)|^(nuxt$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@/apps/(.*)$",
+    "^@/components/(.*)$",
     "",
-    "^@/page-content/(.*)$",
+    "^@/pages/(.*)$",
     "",
     "^@/layouts/(.*)$",
-    "",
-    "^@/widgets/(.*)$",
-    "",
-    "^@/features/(.*)$",
-    "",
-    "^@/entities/(.*)$",
-    "",
-    "^@/shared/(.*)$",
     "",
     "^[./]"
   ],
@@ -33,7 +25,8 @@
   "importOrderParserPlugins": [
     "typescript",
     "jsx",
-    "decorators-legacy"
+    "decorators-legacy",
+    "vue"
   ],
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",

@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
   eslint: {
     // Additional configs
+    
   },
 
   shadcn: {

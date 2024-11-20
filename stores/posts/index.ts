@@ -2,29 +2,29 @@ import { defineStore } from 'pinia';
 import type { Post, State } from './types';
 
 const usePostsStore = defineStore({
-  id: 'posts',
-  
-  state: (): State => {
-    return {
-      posts: []
-    }
-  },
+	id: 'posts',
 
-  actions: {
-    fetchAllPosts: async function() {
-      const { apiEndpoint } = useRuntimeConfig().public;
+	state: (): State => {
+		return {
+			posts: [],
+		};
+	},
 
-      const { data } = await useFetch<Array<Post>>(`${apiEndpoint}/posts`); 
-  
-      if (data.value) {
-        this.posts = data.value;
-      }
-    }
-  },
+	actions: {
+		fetchAllPosts: async function () {
+			const { apiEndpoint } = useRuntimeConfig().public;
 
-  getters: {
-    getPostsValue: (state: State) => state.posts
-  }
+			const { data } = await useFetch<Array<Post>>(`${apiEndpoint}/posts`);
+
+			if (data.value) {
+				this.posts = data.value;
+			}
+		},
+	},
+
+	getters: {
+		getPostsValue: (state: State) => state.posts,
+	},
 });
 
 export default usePostsStore;

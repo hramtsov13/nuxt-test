@@ -14,8 +14,6 @@
 		"postinstall": "nuxt prepare",
 		"prepare": "husky",
 		"lint": "yarn lint:eslint && yarn lint:prettier",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier . --check",
 		"lint:fix": "eslint . --fix && prettier --write --list-different ."
 	},
 	"dependencies": {

@@ -16,7 +16,7 @@
 
 <template>
 	<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-		<div v-for="post in postsStore.posts" :key="post.id" class="rounded-md border border-gray-400 px-4 py-6">
+		<div v-for="post in postsStore.posts" :key="post.id" class="rounded-md border border-gray-400 px-4 py-6 pb-20">
 			<h2 class="mb-2 text-sm font-semibold leading-4">
 				{{ post.title }}
 			</h2>

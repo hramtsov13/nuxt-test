@@ -5,6 +5,10 @@
 		layout: 'default',
 	});
 
+	defineOgImageComponent('default', {
+		title: 'Is this thing on?',
+	});
+
 	const postsStore = usePostsStore();
 
 	await useAsyncData('posts', async () => {

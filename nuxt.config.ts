@@ -30,29 +30,7 @@ export default defineNuxtConfig({
 		},
 	},
 
-	css: [
-		// See https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
-		join(currentDir, './assets/css/global.css'),
-	],
-
-	modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@pinia/nuxt', '@nuxt/eslint'],
-
-	// eslint: {
-	//   // Additional configs
-
-	// },
-
-	shadcn: {
-		/**
-		 * Prefix for all the imported component
-		 */
-		prefix: 'CN',
-		/**
-		 * Directory that the component lives in.
-		 * @default "./components/ui"
-		 */
-		componentDir: './components/ui',
-	},
+	css: [join(currentDir, './assets/css/global.css')],
 
 	nitro: {
 		compressPublicAssets: {
@@ -60,5 +38,27 @@ export default defineNuxtConfig({
 			brotli: true,
 		},
 		minify: true,
+	},
+
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'shadcn-nuxt',
+		'@pinia/nuxt',
+		'@nuxt/eslint',
+		'@nuxtjs/sitemap',
+		'@nuxtjs/robots',
+		'nuxt-og-image',
+	],
+
+	eslint: {
+		// Additional configs
+	},
+
+	shadcn: {
+		componentDir: './components/ui',
+	},
+
+	sitemap: {
+		sources: ['/api/urls'],
 	},
 });

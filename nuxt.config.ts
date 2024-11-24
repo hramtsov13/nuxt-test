@@ -2,9 +2,10 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
+const isProd = process.env.NODE_ENV;
+
 export default defineNuxtConfig({
-	compatibilityDate: '2024-04-03',
 	devtools: { enabled: true },
 
 	runtimeConfig: {
@@ -16,15 +17,18 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			title: 'Nuxt 3 Template',
+
 			htmlAttrs: {
 				lang: 'en',
 			},
+
 			meta: [
 				{ charset: 'utf-8' },
+
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Nuxt 3 Template',
+					content: 'Highly perfomant and scalable Nuxt 3 boilerplate',
 				},
 			],
 		},
@@ -40,31 +44,34 @@ export default defineNuxtConfig({
 		minify: true,
 	},
 
-	modules: [
-		'@nuxtjs/tailwindcss',
-		'shadcn-nuxt',
-		'@pinia/nuxt',
-		'@nuxt/eslint',
-		'@nuxtjs/sitemap',
-		'@nuxtjs/robots',
-		'nuxt-og-image',
-		'@unlighthouse/nuxt',
-	],
-
-	eslint: {
-		// Additional configs
-	},
+	modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@pinia/nuxt', '@nuxt/eslint', '@unlighthouse/nuxt', '@nuxtjs/seo'],
 
 	shadcn: {
 		componentDir: './components/ui',
 	},
 
+	// https://nuxtseo.com/
+	seo: {
+		redirectToCanonicalSiteUrl: true,
+	},
+
+	// From @nuxt/seo -> @nuxt/sitemap
+	// https://nuxtseo.com/docs/sitemap/getting-started/introduction
 	sitemap: {
 		sources: ['/api/urls'],
 	},
 
+	// From @nuxt/seo -> @nuxt/robots
+	//https://nuxtseo.com/docs/robots/getting-started/introduction
 	robots: {
-		debug: true,
-		sitemap: ['/sitemap.xml'],
+		groups: [
+			{
+				userAgent: '*',
+				allow: isProd ? '/' : '',
+			},
+		],
+
+		cacheControl: '',
+		sitemap: '/sitemap.xml',
 	},
 });

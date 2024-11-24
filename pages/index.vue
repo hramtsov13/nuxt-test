@@ -7,8 +7,7 @@
 	});
 
 	useSeoMeta({
-		title: 'Nuxt 3 Boilerplate',
-		description: 'This is a really perfomant and scalable Nuxt 3 boilerplate',
+		title: 'Main',
 	});
 
 	const postsStore = usePostsStore();

@@ -48,6 +48,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/sitemap',
 		'@nuxtjs/robots',
 		'nuxt-og-image',
+		'@unlighthouse/nuxt',
 	],
 
 	eslint: {
@@ -60,5 +61,10 @@ export default defineNuxtConfig({
 
 	sitemap: {
 		sources: ['/api/urls'],
+	},
+
+	robots: {
+		debug: true,
+		sitemap: ['/sitemap.xml'],
 	},
 });

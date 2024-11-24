@@ -1,12 +1,14 @@
 <script setup lang="ts">
 	import usePostsStore from '~/stores/posts/index';
 
-	definePageMeta({
-		layout: 'default',
+	defineOgImageComponent('default', {
+		title: 'Custom title',
+		description: 'Custom description',
 	});
 
-	defineOgImageComponent('default', {
-		title: 'Is this thing on?',
+	useSeoMeta({
+		title: 'Nuxt 3 Boilerplate',
+		description: 'This is a really perfomant and scalable Nuxt 3 boilerplate',
 	});
 
 	const postsStore = usePostsStore();

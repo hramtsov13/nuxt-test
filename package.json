@@ -14,7 +14,8 @@
 		"postinstall": "nuxt prepare",
 		"prepare": "husky",
 		"lint": "yarn lint:eslint && yarn lint:prettier",
-		"lint:fix": "eslint . --fix && prettier --write --list-different ."
+		"lint:fix": "eslint . --fix && prettier --write --list-different .",
+		"lighthouse": "npx unlighthouse --site http://localhost:3000 --debug --no-cache"
 	},
 	"dependencies": {
 		"@nuxt/eslint": "^0.7.1",
@@ -35,6 +36,7 @@
 		"vue-router": "latest"
 	},
 	"devDependencies": {
+		"@unlighthouse/nuxt": "^0.10.6",
 		"eslint": "^9.15.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",

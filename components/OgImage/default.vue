@@ -2,22 +2,29 @@
 	withDefaults(
 		defineProps<{
 			title?: string;
+			description?: string;
+			link?: string;
 		}>(),
 		{
 			title: 'title',
+			description: 'description',
+			link: 'yourwebsite.com',
 		},
 	);
 </script>
 
 <template>
-	<div class="flex h-full w-full items-start justify-start border-[12px] border-solid border-blue-500 bg-gray-50">
-		<div class="flex h-full items-start justify-start">
-			<div class="flex h-full w-full flex-col justify-between">
-				<h1 class="p-20 text-left text-[80px] font-black">
-					{{ title }}
-				</h1>
-				<p class="mb-0 px-20 pb-10 text-2xl font-bold">yourwebsite.com</p>
-			</div>
+	<div class="border-[12px] border-solid border-blue-500 bg-gray-50">
+		<div class="flex h-full w-full flex-col justify-between p-20">
+			<h1 class="text-6xl font-black">
+				{{ title }}
+			</h1>
+
+			<p class="text-4xl font-semibold">
+				{{ description }}
+			</p>
+
+			<p class="text-2xl">{{ link }}</p>
 		</div>
 	</div>
 </template>

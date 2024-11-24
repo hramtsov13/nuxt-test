@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			title: 'Nuxt 3 Template',
+			titleTemplate: 'Nuxt 3 Template | %s',
 
 			htmlAttrs: {
 				lang: 'en',

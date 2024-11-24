@@ -7,18 +7,20 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"start:build": "nuxt build",
-		"start:dev": "nuxt dev",
+		"start:dev": "cross-env NODE_ENV=development SITE_ENV=development nuxt dev",
+		"start:build": "cross-env NODE_ENV=production SITE_ENV=production nuxt build",
+		"preview": "cross-env NODE_ENV=production SITE_ENV=production nuxt preview",
 		"generate": "nuxt generate",
-		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"prepare": "husky",
 		"lint": "yarn lint:eslint && yarn lint:prettier",
-		"lint:fix": "eslint . --fix && prettier --write --list-different ."
+		"lint:fix": "eslint . --fix && prettier --write --list-different .",
+		"lighthouse": "npx unlighthouse --site http://localhost:3000 --debug --no-cache"
 	},
 	"dependencies": {
 		"@nuxt/eslint": "^0.7.1",
 		"@nuxtjs/color-mode": "^3.5.1",
+		"@nuxtjs/seo": "^2.0.0-rc.23",
 		"@nuxtjs/tailwindcss": "^6.12.2",
 		"@pinia/nuxt": "^0.7.0",
 		"clsx": "^2.1.1",
@@ -32,6 +34,8 @@
 		"vue-router": "latest"
 	},
 	"devDependencies": {
+		"@unlighthouse/nuxt": "^0.10.6",
+		"cross-env": "^7.0.3",
 		"eslint": "^9.15.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",

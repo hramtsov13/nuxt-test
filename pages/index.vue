@@ -1,8 +1,13 @@
 <script setup lang="ts">
 	import usePostsStore from '~/stores/posts/index';
 
-	definePageMeta({
-		layout: 'default',
+	defineOgImageComponent('default', {
+		title: 'Custom title',
+		description: 'Custom description',
+	});
+
+	useSeoMeta({
+		title: 'Main',
 	});
 
 	const postsStore = usePostsStore();

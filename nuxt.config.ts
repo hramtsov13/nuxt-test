@@ -45,7 +45,15 @@ export default defineNuxtConfig({
 		minify: true,
 	},
 
-	modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@pinia/nuxt', '@nuxt/eslint', '@unlighthouse/nuxt', '@nuxtjs/seo'],
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'shadcn-nuxt',
+		'@pinia/nuxt',
+		'@nuxt/eslint',
+		'@unlighthouse/nuxt',
+		'@nuxtjs/seo',
+		'nuxt-security',
+	],
 
 	shadcn: {
 		componentDir: './components/ui',
@@ -72,7 +80,22 @@ export default defineNuxtConfig({
 			},
 		],
 
-		cacheControl: '',
 		sitemap: '/sitemap.xml',
+	},
+
+	// https://nuxt-security.vercel.app/documentation/headers/csp
+	security: {
+		strict: true,
+		nonce: true,
+
+		headers: {
+			contentSecurityPolicy: {
+				'connect-src': ["'self'", "'nonce-{{nonce}}'", 'https://*.typicode.com'],
+				'style-src': ["'self'", "'nonce-{{nonce}}'"],
+				'img-src': ["'self'", "'nonce-{{nonce}}'"],
+				'font-src': ["'self'", "'nonce-{{nonce}}'"],
+				'script-src': ["'self'", "'nonce-{{nonce}}'"],
+			},
+		},
 	},
 });

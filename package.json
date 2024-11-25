@@ -35,6 +35,8 @@
 		"vue-router": "latest"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^19.6.0",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@unlighthouse/nuxt": "^0.10.6",
 		"cross-env": "^7.0.3",
 		"eslint": "^9.15.0",

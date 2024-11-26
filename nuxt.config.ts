@@ -9,6 +9,8 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 
 	runtimeConfig: {
+		apiEndpoint: '',
+
 		public: {
 			apiEndpoint: '',
 		},

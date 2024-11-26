@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import type { Post, State } from './types';
+import type { Post, State, User } from './types';
 
 const usePostsStore = defineStore({
 	id: 'posts',
@@ -7,17 +7,24 @@ const usePostsStore = defineStore({
 	state: (): State => {
 		return {
 			posts: [],
+			users: [],
 		};
 	},
 
 	actions: {
 		fetchAllPosts: async function () {
-			const { apiEndpoint } = useRuntimeConfig().public;
+			const data = await $fetch<Array<Post>>('/api/posts');
 
-			const { data } = await useFetch<Array<Post>>(`${apiEndpoint}/posts`);
+			if (data) {
+				this.posts = data;
+			}
+		},
 
-			if (data.value) {
-				this.posts = data.value;
+		fetchAllUsers: async function () {
+			const data = await $fetch<Array<User>>('/api/users');
+
+			if (data) {
+				this.users = data;
 			}
 		},
 	},

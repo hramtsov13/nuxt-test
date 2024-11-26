@@ -15,3 +15,5 @@ Nuxtbase comes pre-configured with powerful tools and best practices to kickstar
 - **SEO Tools** – Optimize visibility with dynamic OG image generation, robots.txt, and sitemap.xml.
 - **Prettier, ESLint and .editorconfig** to ensure code uniformity and quality across your team.
 - **.husky** and **commitlint.config** for writing clear, concise commit messages.
+- **Proxy** – Nitro proxy route to secure your api paths.
+- **Vitest** – Unit testing and coverage value.

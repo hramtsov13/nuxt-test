@@ -51,7 +51,12 @@ export default defineNuxtConfig({
 		'@unlighthouse/nuxt',
 		'@nuxtjs/seo',
 		'nuxt-security',
+		'@nuxt/image',
 	],
+
+	image: {
+		dir: 'assets/images/',
+	},
 
 	shadcn: {
 		componentDir: './components/ui',
@@ -93,6 +98,7 @@ export default defineNuxtConfig({
 				'img-src': ["'self'", "'nonce-{{nonce}}'"],
 				'font-src': ["'self'", "'nonce-{{nonce}}'"],
 				'script-src': ["'self'", "'nonce-{{nonce}}'"],
+				'script-src-attr': ["'self'", "'nonce-{{nonce}}'"],
 			},
 		},
 	},

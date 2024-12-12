@@ -20,7 +20,7 @@
 
 <template>
 	<div>
-		<div>
+		<div class="mb-20">
 			<p>
 				Different sizes:
 				<NuxtIcon name="uil:github" />

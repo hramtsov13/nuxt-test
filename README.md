@@ -17,3 +17,4 @@ Nuxtbase comes pre-configured with powerful tools and best practices to kickstar
 - **.husky** and **commitlint.config** for writing clear, concise commit messages.
 - **Proxy** – Nitro proxy route to secure your api paths.
 - **Vitest** – Unit testing and coverage value.
+- **Icons** – Any icon you can imagine is available using <NuxtIcon /> component and Iconify naming convention.

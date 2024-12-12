@@ -52,6 +52,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/seo',
 		'nuxt-security',
 		'@nuxt/image',
+		'@nuxt/icon',
 	],
 
 	image: {
@@ -93,13 +94,19 @@ export default defineNuxtConfig({
 
 		headers: {
 			contentSecurityPolicy: {
+				'default-src': ["'self'"],
 				'connect-src': ["'self'", "'nonce-{{nonce}}'", 'https://*.typicode.com'],
-				'style-src': ["'self'", "'nonce-{{nonce}}'"],
-				'img-src': ["'self'", "'nonce-{{nonce}}'"],
+				'style-src': ["'self'", "'unsafe-inline'"], // unsafe-inline is recommended, see docs https://nuxt-security.vercel.app/headers/csp
+				'img-src': ["'self'", 'data:', "'nonce-{{nonce}}'"],
 				'font-src': ["'self'", "'nonce-{{nonce}}'"],
 				'script-src': ["'self'", "'nonce-{{nonce}}'"],
 				'script-src-attr': ["'self'", "'nonce-{{nonce}}'"],
 			},
 		},
+	},
+
+	// Icons package, uses iconify convention https://iconify.design/docs/icons/icon-basics.html
+	icon: {
+		componentName: 'NuxtIcon',
 	},
 });
